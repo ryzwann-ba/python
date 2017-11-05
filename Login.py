@@ -1,6 +1,11 @@
+import sql_db
+
 CreateUser = input("Veuillez créer votre pseudo:")
 CreatePassword = input("Veuillez saisir un nouveau mot de passe:")
 
+data = {"pseudo" : CreateUser, "mdp" : CreatePassword}
+cursor.execute("""
+INSERT INTO users(login, mdp) VALUES(:login, :mdp)""", data)
 #confirmation de fin de création de login et mot e passe
 print("Votre compte a bien été crée :)")
 
