@@ -19,5 +19,5 @@ while Password != CreatePassword:
     Password = input("votre mot de passe n'est pas valide, veuillez resaisir votre mot de passe:")
 
 # Login et mot de passe correct, message de bienvenue...
-print("Welcome " + User)
+print("Bienvenu " + User)
     
