@@ -1,7 +1,7 @@
 import sqlite3
-conn = sqlite3.Connection('ma_base.db')
-cursor = conn.cursor()
-cursor.execute("""
+cnx = sqlite3.Connection('ma_base.db')
+createur_table = cnx.cursor()
+createur_table.execute("""
 CREATE TABLE IF NOT EXISTS users(
      id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
      login TEXT,
