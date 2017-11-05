@@ -1,11 +1,11 @@
-CreateUser = input("Veuillez saisir votre pseudo:")
-CreatePassword = input("Veuillez saisir votre mot de passe:")
+CreateUser = input("Veuillez créer votre pseudo:")
+CreatePassword = input("Veuillez saisir un nouveau mot de passe:")
 
 #confirmation de fin de création de login et mot e passe
-print("The account was well created! :)")
+print("Votre compte a bien été crée :)")
 
 # Demande de login
-User = input("Username:")
+User = input("Pseudo:")
 
 if User != CreateUser:
     while User != CreateUser:
