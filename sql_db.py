@@ -8,4 +8,5 @@ CREATE TABLE IF NOT EXISTS users(
      mdp text
 )
 """)
-conn.commit()
+cnx.commit()
+

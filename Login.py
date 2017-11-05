@@ -1,5 +1,6 @@
 import sql_db
-createur_ligne = sql_db.cnx()
+cnx = sql_db.sqlite3.Connection('ma_base.db')
+createur_ligne = sql_db.cnx.cursor()
 
 CreateUser = input("Veuillez créer votre pseudo:")
 CreatePassword = input("Veuillez saisir un nouveau mot de passe:")
@@ -8,6 +9,8 @@ data = {"login" : CreateUser, "mdp" : CreatePassword}
 
 createur_ligne.execute("""
 INSERT INTO users(login, mdp) VALUES(:login, :mdp)""", data)
+sql_db.cnx.commit()
+sql_db.cnx.close()
 
 #confirmation de fin de création de login et mot e passe
 print("Votre compte a bien été crée :)")
