@@ -9,16 +9,14 @@ User = input("Pseudo:")
 
 if User != CreateUser:
     while User != CreateUser:
-        print("The Username is not correct, please check this...")
-        User = input("Try again username:")
+        User = input("votre pseudo n'est pas valide, veuillez resaisir votre pseudo: ")
 
 # Login correct, passons à la demande de mot de passe...
-Password = input("password:")
+Password = input("Veuillez saisir votre mot de passe:")
 
 #Demande mot de passe tant que le mot de passe n'est pas bon...
 while Password != CreatePassword:
-    print("The password is not correct, please check this...")
-    Password = input("Try again password:")
+    Password = input("votre mot de passe n'est pas valide, veuillez resaisir votre mot de passe:")
 
 # Login et mot de passe correct, message de bienvenue...
 print("Welcome " + User)
