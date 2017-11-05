@@ -1,5 +1,5 @@
-CreateUser = input("Create a Username:")
-CreatePassword = input("Create a Password:")
+CreateUser = input("Veuillez saisir votre pseudo:")
+CreatePassword = input("Veuillez saisir votre mot de passe:")
 
 #confirmation de fin de création de login et mot e passe
 print("The account was well created! :)")
