@@ -1,4 +1,6 @@
+# importation de "sql_db"
 import sql_db
+#
 cnx = sql_db.sqlite3.Connection('ma_base.db')
 createur_ligne = sql_db.cnx.cursor()
 
