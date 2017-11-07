@@ -2,7 +2,7 @@
 import sqlite3
 #etablir la connection vers la base "sqlite3"
 #la base de donné s'appelle "ma_base" .db extension
-cnx = sqlite3.Connection('ma_base.db')
+cnx = sqlite3.Connection('database.db')
 #creation d'un cursor pour créer la table "user". Cette table contiendra la liste de tout les pseudos avec la liste de mots de passes
 createur_table = cnx.cursor()
 #execution de "cursor" avec la commande sql en parametre

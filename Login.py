@@ -1,8 +1,8 @@
 # importation de "sql_db"
 import sql_db
 #
-cnx = sql_db.sqlite3.Connection('ma_base.db')
-createur_ligne = sql_db.cnx.cursor()
+cnx2 = sql_db.sqlite3.Connection('database.db')
+createur_ligne = cnx2.cursor()
 
 CreateUser = input("Veuillez créer votre pseudo:")
 CreatePassword = input("Veuillez saisir un nouveau mot de passe:")
@@ -11,8 +11,8 @@ data = {"login" : CreateUser, "mdp" : CreatePassword}
 
 createur_ligne.execute("""
 INSERT INTO users(login, mdp) VALUES(:login, :mdp)""", data)
-sql_db.cnx.commit()
-sql_db.cnx.close()
+cnx2.commit()
+cnx2.close()
 
 #confirmation de fin de création de login et mot e passe
 print("Votre compte a bien été crée :)")
